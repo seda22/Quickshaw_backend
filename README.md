@@ -1,3 +1,9 @@
+**TL;DR**  
+QuickShaw is a two-sided pooled mobility concept for short-distance travel
+in Tier-2 and Tier-3 cities, built around driver-first economics and
+basket-based pooling logic.
+
+
 # QuickShaw
 
 QuickShaw is a basket-based pooled mobility platform designed for short-distance travel in Tier-2 and Tier-3 cities.
