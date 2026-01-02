@@ -80,3 +80,36 @@ This is a Next.js project bootstrapped with `create-next-app`.
 
 ```bash
 npm run dev
+
+
+## Future Scope (Stage-2)
+
+The following capabilities are intentionally scoped for post-MVP iterations.
+Stage-2 focuses on optimization and scalability once core pooling behavior
+and driver adoption are validated.
+
+Planned areas of expansion include:
+
+- **Weighted pooling metrics**  
+  Pooling decisions that consider user waiting tolerance and driver idle time,
+  rather than fixed thresholds.
+
+- **Dynamic fare adjustments**  
+  Introduction of waiting fees, cancellation penalties, and incentive balancing
+  to improve reliability without reverting to commission-based pricing.
+
+- **“Pool on the Go” matching**  
+  Direction-based pooling that allows riders to be matched while vehicles
+  are already in motion, increasing utilization during peak hours.
+
+- **Expanded demand intelligence**  
+  More granular heatmap signals to support driver decision-making across
+  time-of-day and location patterns.
+
+- **Scalable location architecture**  
+  Transition from region-specific configuration to a scalable location
+  database supporting multi-city expansion.
+
+These enhancements are deferred to Stage-2 to preserve MVP simplicity
+and reduce operational risk during early deployment.
+
