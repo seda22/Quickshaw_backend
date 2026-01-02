@@ -1,0 +1,522 @@
+
+/* ---- topbar ---- */
+.topbar {
+  width: 100%;
+  height: 96px;
+  background: #000;
+}
+.topbarInner {
+  max-width: min(1280px, 92vw);
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 clamp(16px, 3vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-left: calc(env(safe-area-inset-left) + clamp(16px, 3vw, 48px));
+  padding-right: calc(env(safe-area-inset-right) + clamp(16px, 3vw, 48px));
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  margin-left: clamp(0px, 0.5vw, 8px);
+}
+.menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-right: 1px;
+}
+.link {
+  font-size: clamp(12px, 1.6vw, 20px);
+  font-weight: 400;
+  letter-spacing: clamp(0.6px, 0.14vw, 1.8px);
+  color: #fff;
+  opacity: 0.98;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+.link:hover {
+  opacity: 1;
+}
+.linkActive {
+  color: #ffae00;
+}
+
+/* ---- page container ---- */
+.pageBody {
+  max-width: min(1280px, 92vw);
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 48px) 48px;
+}
+
+/* ---- heading ---- */
+.headWrap {
+  padding: 40px 0 12px;
+}
+.pageTitle {
+  color: #000;
+  font-family: "Archivo", system-ui, -apple-system, Segoe UI, Roboto, Inter,
+    Helvetica, Arial;
+  font-weight: 800;
+  font-size: clamp(34px, 5.2vw, 68px);
+  line-height: normal;
+  letter-spacing: 3.4px;
+  margin: 0;
+}
+
+/* ---- slider ---- */
+.sliderWrap {
+  position: relative;
+  background: #fff;
+  padding: 8px 0 24px;
+  display: grid;
+  grid-template-rows: auto auto;
+  place-items: center;
+  padding: 3rem;
+}
+
+/* compact centered window */
+/* remove the white box look */
+.sliderViewport {
+  max-width: min(960px, 90vw);
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0; /* was 16px */
+  box-shadow: none; /* was 0 12px 24px ... */
+  background: transparent; /* was #fff */
+}
+
+/* Track */
+.sliderStrip {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+/* Each slide auto-sizes */
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  display: block;
+}
+
+/* Image slides */
+.slideImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  background: #fff;
+}
+
+/* arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  border: 0;
+  background: #fff;
+  color: #222;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrowLeft {
+  left: 16px;
+}
+.arrowRight {
+  right: 16px;
+}
+.arrow:hover {
+  filter: brightness(1.03);
+}
+
+/* dots */
+.dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #dadada;
+  border: 0;
+  cursor: pointer;
+}
+.dotActive {
+  background: #111;
+}
+
+/* ===== Coded Slide (o5) ===== */
+/* Card */
+.o5Card {
+  background: #fff3c2;              /* yellow card */
+  border-radius: 20px;
+  padding: clamp(18px, 3vw, 28px);
+}
+
+/* Grid */
+.o5Grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(18px, 3vw, 40px);
+  align-items: center;
+}
+
+/* Art panel — transparent so only card yellow shows */
+.o5Art {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+  background: transparent;          /* no inner gradient/grey */
+}
+
+/* Art image */
+.o5ArtImg {
+  object-fit: contain;              /* use 'cover' if you want edge-to-edge crop */
+  object-position: center;
+  background: transparent;
+}
+
+/* Right side content */
+.o5Right { align-self: start; }
+
+.o5Title {
+  margin: 0 0 12px 0;
+  font-family: "Archivo", system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial;
+  font-weight: 800;
+  font-size: clamp(28px, 4.8vw, 60px);
+  line-height: 1.05;
+  color: #000;
+}
+
+.o5Modes {
+  display: flex;
+  gap: 12px;
+  margin: 10px 0 18px;
+}
+
+.o5Pill {
+  border: 0;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08), inset 0 0 0 1px rgba(0,0,0,.06);
+  font-weight: 700;
+  font-size: clamp(14px, 1.7vw, 20px);
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+.o5Pill:focus-visible {
+  box-shadow: 0 0 0 3px rgba(30,64,175,.35), 0 4px 14px rgba(0,0,0,.08);
+}
+.o5PillActive {
+  background: #fcb607;
+  color: #1d1200;
+  box-shadow: 0 6px 16px rgba(231,155,0,.28);
+}
+
+.o5Emoji { margin-right: 8px; }
+
+.o5Counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #3b2a10;
+  color: #fff;
+  border-radius: 14px;
+  padding: 10px 14px;
+  width: clamp(280px, 40vw, 420px);
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.08), 0 10px 18px rgba(0,0,0,.12);
+}
+
+.o5Btn {
+  height: 48px;
+  width: 56px;
+  border-radius: 10px;
+  border: 0;
+  background: #fff;
+  color: #1e1405;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,.12);
+}
+.o5Btn:disabled { opacity: .45; cursor: not-allowed; }
+
+.o5PersonWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+.o5Count { font-weight: 800; font-size: clamp(20px, 3.2vw, 36px); }
+
+.o5Msg {
+  margin: 12px 0 0 4px;
+  color: #15803d;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(14px, 1.8vw, 20px);
+}
+
+.o5Copy {
+  margin: 14px 0 0 0;
+  color: #222;
+  font-size: clamp(16px, 2vw, 22px);
+  line-height: 1.45;
+  max-width: 48ch;
+}
+
+/* Responsive tweak */
+@media (max-width: 900px) {
+  .o5Grid { grid-template-columns: 1fr; }
+}
+
+
+
+/* ===== Coded Slide (o2) ===== */
+.o2Stage {
+  position: relative;
+  min-height: clamp(460px, 62vw, 620px);
+  border-radius: 20px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.o2MapWrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.o2Map {
+  object-fit: cover;
+  object-position: right center;
+}
+.o2Fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.9) 28%,
+    rgba(255, 255, 255, 0.55) 52%,
+    rgba(255, 255, 255, 0.22) 72%,
+    rgba(255, 255, 255, 0) 88%
+  );
+  z-index: 0;
+}
+.o2Content {
+  position: relative;
+  z-index: 1;
+  padding: clamp(18px, 3.4vw, 32px);
+  max-width: min(720px, 78%);
+}
+.o2H {
+  margin: 0 0 8px 0;
+  font-family: "Archivo", system-ui, -apple-system, Segoe UI, Roboto, Inter,
+    Helvetica, Arial;
+  font-weight: 800;
+  font-size: clamp(25px, 6vw, 72px);
+  line-height: 1.04;
+  color: #000;
+}
+.o2Sub {
+  margin: 10px 0 22px 0;
+  font-size: clamp(16px, 2.2vw, 26px);
+  line-height: 1.35;
+  color: #111;
+  max-width: 36ch;
+}
+
+.o2GroupTitle {
+  font-family: "Archivo", system-ui, -apple-system, Segoe UI, Roboto, Inter,
+    Helvetica, Arial;
+  font-weight: 800;
+  font-size: clamp(22px, 3.2vw, 40px);
+  margin: 20px 0 14px;
+}
+
+/* Solid black subheads */
+.o2GroupTitle {
+  color: #000 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  mix-blend-mode: normal !important;
+}
+
+.o2Chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.o2Chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid #111;
+  /* changed font weight from 700 to 500*/
+  font-weight: 500;
+  font-size: clamp(14px, 1.9vw, 20px);
+  color: #111;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+}
+.o2ChipActive {
+  background: #ffd873;
+  box-shadow: 0 2px 0 0 #a58000 inset;
+}
+.o2ChipIcon {
+  display: block;
+}
+/* O2: make the subheads solid black (no fade/overlay) */
+.o2Card h3 {
+  color: #000 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  mix-blend-mode: normal !important;
+}
+/* === O2 size + spacing tweaks (Figma-match) === */
+.o2Stage {
+  min-height: clamp(420px, 56vw, 560px); /* a bit shorter */
+}
+
+.o2Content {
+  padding: clamp(14px, 2.6vw, 24px); /* tighter padding */
+  max-width: min(640px, 70%); /* narrower content column */
+}
+
+/* Title a little smaller */
+.o2H {
+  font-size: clamp(26px, 5.2vw, 56px);
+  margin: 0 0 6px 0;
+}
+
+/* Subtitle smaller + closer */
+.o2Sub {
+  font-size: clamp(15px, 1.8vw, 22px);
+  line-height: 1.32;
+  margin: 6px 0 16px 0;
+}
+
+/* Group headers smaller + tighter spacing (solid black already enforced) */
+.o2GroupTitle {
+  font-size: clamp(20px, 2.6vw, 32px);
+  margin: 14px 0 10px;
+  color: #000 !important;
+}
+
+/* Chips: slightly smaller & tighter gaps */
+.o2Chips {
+  gap: 10px;
+}
+
+.o2Chip {
+  padding: 8px 12px;
+  font-size: clamp(13px, 1.6vw, 18px);
+}
+
+/* Make chip icons a touch smaller without touching JSX */
+.o2Chip :global(img) {
+  width: 22px;
+  height: 22px;
+}
+/* === O2 spacing tweaks: add air between blocks === */
+.o2H {
+  /* more space below the "Go Everywhere" title */
+  margin: 0 0 clamp(10px, 1.8vw, 18px) 0;
+}
+
+.o2Sub {
+  /* more space beneath the paragraph */
+  margin: 0 0 clamp(18px, 2.4vw, 26px) 0;
+}
+
+.o2GroupTitle {
+  /* more space before each subhead, a bit under it too */
+  margin: clamp(20px, 3vw, 28px) 0 clamp(12px, 1.6vw, 16px);
+}
+
+.o2Chips {
+  /* slightly wider chip gaps + space before the next block */
+  gap: 12px;
+  margin-bottom: clamp(14px, 2.2vw, 20px);
+}
+
+/* extra safety: if a subhead directly follows a chip row, push it down more */
+.o2Chips + .o2GroupTitle {
+  margin-top: clamp(22px, 3.2vw, 32px);
+}
+
+/* responsive */
+@media (max-width: 960px) {
+  .o5Grid {
+    grid-template-columns: 1fr;
+  }
+  .o5Art {
+    order: 2;
+    height: clamp(180px, 34vw, 280px);
+  }
+  .o5Right {
+    order: 1;
+  }
+}
+@media (max-width: 900px) {
+  .topbar {
+    height: 84px;
+  }
+}
+@media (max-width: 560px) {
+  .topbar {
+    height: 72px;
+  }
+}
+
+/* Global CTA button (below all slides) */
+.globalCtaWrap {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.globalCtaBtn {
+  display: inline-block;
+  padding: 16px 36px;
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 700;
+  color: #000;
+  background: #ffae00;
+  border:0;
+  outline:0;
+  border-radius: 12px;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.globalCtaBtn:hover {
+  background: #ffb933;
+}

@@ -1,0 +1,58 @@
+/* --- mobile safety --- */
+html, body { overflow-x: hidden; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Global tokens & resets */
+:root {
+  --qs-black: #000000;
+  --qs-white: #ffffff;
+  --qs-underline: #FFF2C2;
+  --qs-frame-width: 1440px;
+  --qs-nav-height: 147px;
+  --qs-side-pad: 56px;
+  --qs-logo-shift: 16px;
+  --qs-menu-gap: 80px;
+  --qs-menu-shift: 24px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--qs-black);
+  color: var(--qs-white);
+  font-family: "Archivo", system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+* { box-sizing: border-box; }
+a { color: inherit; text-decoration: none; }
+
+/* Optional global media reset */
+img, svg, video, canvas { max-width: 100%; height: auto; display: block; }
+
+/* Optional: smooth anchors */
+html { scroll-behavior: smooth; }
+
+/* moved from modules */
+html, body { background:#fff; margin:0; padding:0; }
+
+/* moved from modules */
+html, body { background:#fff; margin:0; padding:0; }
+
+/* moved from modules */
+html, body { background:#fff; margin:0; padding:0; }
+
+/* moved from modules */
+html, body { background:#fff; margin:0; padding:0; }
+
+
+/* global hygiene — allowed in globals.css */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Archivo", system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial;
+}
