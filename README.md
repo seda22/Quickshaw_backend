@@ -36,9 +36,9 @@ QuickShaw is designed as a two-sided system, addressing the distinct needs of bo
 
   ## Documentation
 
-- [Problem & Business Model](docs/problem-and-model.md)
-- [Pooling Logic (Stage-1 MVP)](docs/pooling-logic.md)
-- [User vs Driver View](docs/user-vs-driver.md)
+- [Problem & Business Model](docs/docs/problem-and-model.md)
+- [Pooling Logic (Stage-1 MVP)](docs/docs/pooling-logic.md)
+- [User vs Driver View](docs/docs/user-vs-driver.md)
 
   ## Repo Structure
 
