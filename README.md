@@ -28,6 +28,12 @@ QuickShaw is designed as a two-sided system, addressing the distinct needs of bo
 - **Driver App**  
   Built for rickshaw and e-auto drivers to manage pooled trips, demand visibility, and operational flow.
 
+  ## Documentation
+
+- [Problem & Business Model](docs/problem-and-model.md)
+- [Pooling Logic (Stage-1 MVP)](docs/pooling-logic.md)
+- [User vs Driver View](docs/user-vs-driver.md)
+
 ---
 
 ## User App Interface
